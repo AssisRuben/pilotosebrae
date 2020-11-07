@@ -29,7 +29,7 @@ pageWithSidebar(
   ),
   
   mainPanel(
-    tags$label(h3('Status/Output')), # Status/Output Text Box
+    tags$label(h3('Probabilidade de Sucesso')), # Status/Output Text Box
     verbatimTextOutput('contents'),
     tableOutput('tabledata') # Prediction results table
     
