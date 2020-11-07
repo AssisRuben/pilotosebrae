@@ -1,9 +1,5 @@
 library(shiny)
 
-# Training set
-TrainSet <- read.csv("training.csv", header = TRUE)
-TrainSet <- TrainSet[,-1]
-
 pageWithSidebar(
   
   # Page header
@@ -13,19 +9,19 @@ pageWithSidebar(
   sidebarPanel(
     HTML("<h3>Input parameters</h3>"),
     
-    selectInput("regiao", label = "Regi„o:", 
+    selectInput("regiao", label = "Regi√£o:", 
                 choices = list("Norte" = "norte",  "Sul" = "sul"), 
                 selected = "Norte"),
-    sliderInput("area", "¡rea (ha):",
+    sliderInput("area", "√Årea (ha):",
                 min = 5, max = 140,
                 value = 70),
     numericInput("pl", 
-                 label = "ProduÁ„o de leite (L):", 
+                 label = "Produ√ß√£o de leite (L):", 
                  value = 12),
-    sliderInput("femea", "FÍmeas (%):",
+    sliderInput("femea", "F√™meas (%):",
                 min = 19, max = 90,
                 value = 40),
-    selectInput("sistema", label = "Sistemas de criaÁ„o:", 
+    selectInput("sistema", label = "Sistemas de cria√ß√£o:", 
                 choices = list("Confinado" = "confinado", "Extensivo" = "extensivo"), 
                 selected = "Confinado"),
     
